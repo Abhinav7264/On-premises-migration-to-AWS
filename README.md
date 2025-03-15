@@ -159,6 +159,9 @@ python3 wiki.py
 🎉 **Success!** Add an article:
 _“I'm conquering the MultiCloud Universe! 🌎🔥”_
 
+The Final product looks like this
+<img width="1225" alt="Screenshot 2025-03-15 at 1 15 08 AM" src="https://github.com/user-attachments/assets/983b31bb-b8f4-4033-82a2-d9386bca1ae1" />
+
 ---
 
 ## 🛑 Post Go Live: Cleanup Resources
