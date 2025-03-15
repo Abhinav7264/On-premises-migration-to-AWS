@@ -28,14 +28,14 @@
 
 ## 📌 Part 2: Configuring EC2 & Installing Dependencies
 
+### 🌍 Set Up Internet Gateway & Routing
+- Create **Internet Gateway**: `igw-mod3` → Attach to `vpc-bootcamp`
+- Route Table → Add Route `0.0.0.0/0` → Target: `igw-mod3`
+
 ### 🔗 Connect to EC2
 ```bash
 ssh -i ec2-ssh ubuntu@<EC2_PUBLIC_IP>
 ```
-
-### 🌍 Set Up Internet Gateway & Routing
-- Create **Internet Gateway**: `igw-mod3` → Attach to `vpc-bootcamp`
-- Route Table → Add Route `0.0.0.0/0` → Target: `igw-mod3`
 
 ### 📦 Installing Packages & Dependencies
 ```bash
