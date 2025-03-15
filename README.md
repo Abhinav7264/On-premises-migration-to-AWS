@@ -37,14 +37,81 @@
 ssh -i ec2-ssh ubuntu@<EC2_PUBLIC_IP>
 ```
 
-### 📦 Installing Packages & Dependencies
+### 👁️ **Installing the application's dependencies**  
+
+**Ubuntu 22.04** may prompt ‘pop-ups’ after installing or updating packages, asking:  
+
+🔹 *“What service should be restarted?”*  
+
+By default, this is set to **"interactive"** mode, causing interruptions in scripts.  
+
+To change this behavior, update the `/etc/needrestart/needrestart.conf` file:  
+
+📝 **Modify the following lines:**  
+
+```bash
+#$nrconf{restart} = 'i';  # Default (interactive)
+$nrconf{restart} = 'a';  # Changed to automatic
+```
+
+➡️ *‘i’ = interactive* | *‘a’ = automatic*  
+
+---
+
+### ⚙️ **Apply Changes Using `sed` Command**  
+
 ```bash
 sudo sed -i "/#\$nrconf{restart} = 'i';/s/.*/\$nrconf{restart} = 'a';/" /etc/needrestart/needrestart.conf
-sudo apt update && sudo apt install -y python3-dev python3-pip build-essential \
-  libssl-dev libffi-dev libmysqlclient-dev unzip libpq-dev libxml2-dev \
-  libxslt1-dev libldap2-dev libsasl2-dev pkg-config mysql-client
-pip3 install Flask==2.3.3 wtforms flask_mysqldb passlib
+```
+
+### ✅ **Verify Changes Made**  
+
+```bash
+cat /etc/needrestart/needrestart.conf | grep -i nrconf{restart}
+sudo apt update
+sudo apt install python3-dev -y
+sudo apt install python3-pip -y
+```
+
+---
+
+### 🔧 **Install Required Packages**  
+
+```bash
+sudo apt install build-essential libssl-dev libffi-dev -y
+sudo apt install libmysqlclient-dev -y
+sudo apt install unzip -y
+sudo apt install libpq-dev libxml2-dev libxslt1-dev libldap2-dev -y
+sudo apt install libsasl2-dev libffi-dev -y
+```
+
+---
+
+### 🛠️ **Install Python Packages**  
+
+```bash
+pip install Flask==2.3.3
+```
+
+⚠ **Potential Warning & Fix:**  
+
+```bash
 export PATH=$PATH:/home/ubuntu/.local/bin/
+```
+
+```bash
+pip3 install wtforms
+sudo apt install pkg-config
+pip3 install flask_mysqldb
+pip3 install passlib
+```
+
+---
+
+### 🗃️ **Install MySQL Client**  
+
+```bash
+sudo apt-get install mysql-client -y
 ```
 
 ---
