@@ -1,5 +1,5 @@
 ![1-PORTFOLIO PROJECTS_AWS - MODULE 3_ARCHITECTURE](https://github.com/user-attachments/assets/2baccfc4-6683-49f6-88b9-51498c7d2c6b)
-
+# Migration of a Workload running in a Corporate Data Center to AWS using the Amazon EC2 and RDS service
 # 🚀 AWS Deployment Guide
 
 ## 📌 Part 1: Deploying EC2 & RDS
