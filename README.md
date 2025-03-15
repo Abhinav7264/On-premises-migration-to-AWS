@@ -66,11 +66,8 @@ FLUSH PRIVILEGES;
 ```
 
 ### 📥 Download & Configure Application
-```bash
-wget https://tcb-bootcamps.s3.amazonaws.com/bootcamp-aws/en/wikiapp-en.zip
-wget https://tcb-bootcamps.s3.amazonaws.com/bootcamp-aws/en/module3/dump-en.sql
-unzip wikiapp-en.zip
-```
+Save the wikiapp-en.zip and dump-en.sql in a s3 bucket and make it public
+Download these files in ubuntu EC2 instance
 
 ### ✍ Edit `wiki.py`
 ```bash
