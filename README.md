@@ -1,3 +1,5 @@
+![1-PORTFOLIO PROJECTS_AWS - MODULE 3_ARCHITECTURE](https://github.com/user-attachments/assets/2baccfc4-6683-49f6-88b9-51498c7d2c6b)
+
 # 🚀 AWS Deployment Guide
 
 ## 📌 Part 1: Deploying EC2 & RDS
